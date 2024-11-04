@@ -4,7 +4,7 @@ This repository contains the code for implementing authentication in Next.js 15 
 
 ## 🎥 Video Tutorial
 
-Watch the step-by-step tutorial on YouTube: [Implementing Authentication in Next.js with Supabase](your_video_link_here)
+Watch the step-by-step tutorial on YouTube: [Build a Modern Auth System in 20 Minutes with NextJS 15 and Supabase](https://www.youtube.com/watch?v=gAMYk-ls1sQ)
 
 ## 🚀 Getting Started
 
@@ -28,7 +28,7 @@ Watch the step-by-step tutorial on YouTube: [Implementing Authentication in Next
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/nextjs15-auth-tutorial.git
+   git clone https://github.com/Kirsanow/nextjs15-auth-tutorial.git
    ```
 
 2. Install dependencies:
