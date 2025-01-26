@@ -1,6 +1,9 @@
-import { redirect } from "next/navigation";
+import { HeroSection } from "@/components/landing/hero-section/hero-section.component";
 
-export default function Home() {
-  redirect("/sign-in");
-  return <></>;
+export default async function PrivatePage() {
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
