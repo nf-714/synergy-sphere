@@ -25,6 +25,7 @@ export function Navigation() {
     scrollY > 50
       ? "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/50 backdrop-blur-sm"
       : "fixed top-0 left-0 right-0 z-50 transition-all";
+
   return (
     <nav className={`${navClassName}`}>
       <div className="px-4 sm:px-6 flex h-16 items-center justify-between">
@@ -64,13 +65,13 @@ export function Navigation() {
             About
           </Link>
           <Link
-            href="/login"
+            href="/sign-in"
             className="text-gray-600 font-medium text-base hover:text-blue-600"
           >
             Log in
           </Link>
           <Button variant="outline" className="ml-4" asChild>
-            <Link href="/login">Log in</Link>
+            <Link href="/sign-in">Log in</Link>
           </Button>
         </div>
 

@@ -3,22 +3,24 @@ import { getUser } from "./queries/user";
 import { updateSession } from "./supabase/middleware";
 
 const PUBLIC_ROUTES = [
-  "/",
   "/sign-in",
   "/sign-up",
   "/forgot-password",
   "/reset-password",
 ];
 
-const PRIVATE_ROUTES = ["/profile", "/settings"];
+const PRIVATE_ROUTES = ["/profile", "/settings", "/home"];
 
 export async function middleware(request: NextRequest) {
   const user = await getUser();
   const pathname = request.nextUrl.pathname;
 
   // Redirect logged-in users from public auth routes
-  if (user && (pathname === "/sign-in" || pathname === "/sign-up")) {
-    return NextResponse.redirect(new URL("/", request.url));
+  if (
+    user &&
+    (pathname === "/sign-in" || pathname === "/sign-up" || pathname === "/")
+  ) {
+    return NextResponse.redirect(new URL("/home", request.url));
   }
 
   // Redirect non-logged-in users from private routes
