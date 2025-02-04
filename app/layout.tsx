@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend_giga.className} antialiased`}>{children}</body>
+      <body className={`${geistSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
