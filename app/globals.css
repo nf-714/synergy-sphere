@@ -70,3 +70,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Override markdown editor styles for white background */
+.w-md-editor {
+  background-color: white !important;
+}
+
+.w-md-editor-text-pre,
+.w-md-editor-text-input,
+.w-md-editor-text {
+  color: #333 !important;
+}
+
+.wmde-markdown {
+  background-color: white !important;
+  color: #333 !important;
+}

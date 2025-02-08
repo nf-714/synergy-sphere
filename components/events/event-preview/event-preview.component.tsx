@@ -1,8 +1,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import MarkdownPreview from "@uiw/react-markdown-preview";
 import { Clock, MapPin, Users } from "lucide-react";
+
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
 
 interface EventPreviewProps {
   event: {
@@ -129,8 +130,12 @@ export function EventPreview({ event, onEdit }: EventPreviewProps) {
             </div>
             <div className="space-y-6">
               <h2 className="text-xl font-semibold">About This Event</h2>
-              <div className="prose max-w-none">
-                <ReactMarkdown>{event.detailedDescription}</ReactMarkdown>
+              <div
+                className="prose max-w-none"
+                suppressHydrationWarning
+                data-color-mode="white"
+              >
+                <MarkdownPreview source={event.detailedDescription} />
               </div>
             </div>
           </div>
